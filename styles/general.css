@@ -1,0 +1,126 @@
+@font-face {
+  font-family: “Rival”;
+  src: url(../fonts/Rival.ttf); 
+}
+
+body, html {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	margin: 0px 0px 0px 0px;
+}
+
+.header {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+}
+
+.up_content {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	background-color: #302E2E;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-ms-justify-content: space-between;
+}
+
+.switch {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-ms-justify-content: space-between;
+}
+
+.switch p {
+	font-family: “Rival”;
+	color: white;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.switch p:hover {
+	color: #FFA500;
+}
+
+.down_content {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-ms-justify-content: space-between;
+	background-color: #FFA500;
+	height: 119px;
+}
+
+.down_content img {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+footer {
+	background-color: black;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-around;
+	align-content: space-around;
+}
+
+footer section {
+	width: 30%;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+}
+
+#footer_3 img {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#llicencia  {
+	width:80%;
+	}
+
+footer a {
+	color:white;
+}
+
+footer ul li {
+	list-style: none;
+	display: block;
+	margin-top: 2%;
+}
