@@ -4,15 +4,13 @@
 	include_once('connection.php');
 	$connection = new Connection();
 	$connect = $connection->connect();
-	$result = $connect->query("SELECT * FROM diy_users");
+	$result = $connect->query("SELECT * FROM diy_designs");
 	$outp = "[";
 	while($rs = $result->fetch_array(MYSQLI_ASSOC)){
 		if ($outp != "[") {$outp .= ",";}
-	    $outp .= '{"user_id":"'.$rs["user_id"].'",';
-	    $outp .= '"name":"'.$rs["name"].'",';
-	    $outp .= '"surnames":"'.$rs["surnames"].'",';
-	    $outp .= '"email":"'.$rs["email"].'",';
-	    $outp .= '"hash_pass":"'. $rs["hash_pass"]. '"}';
+	    $outp .= '{"design_id":"'.$rs["design_id"].'",';
+	    $outp .= '"img":"'.$rs["img"].'",';
+	    $outp .= '"user_id":"'.$rs["user_id"].'"}';
 	}
 	$outp .="]";
 	$connection->disconnect($connect);

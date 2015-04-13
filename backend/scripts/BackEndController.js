@@ -13,7 +13,7 @@ function BackEndController($scope){
 		for (var i=0;i<$scope.users;i++) {
 			if (($scope.email==i['email']) && ($scope.password==i['password'])) {
 				createCookie('user',i['name'],1);
-				location.replace('http://localhost/Projecte/backend/views/home.html');
+				location.replace('http://127.0.0.1/Projecte/backend/views/home.html');
 			} 
 		}
 

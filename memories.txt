@@ -1,0 +1,7 @@
+Dilluns 13/04/15 :
+
+	Albert - Disseny de formulari login i les seves funcionalitats
+
+	Lu - Getters & Deletes del backend
+
+	
