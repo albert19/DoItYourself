@@ -127,3 +127,7 @@ table tr td:last-child img {
 	color:white;
 	padding: 10px;
 }
+
+#image{
+	display: none;
+}
