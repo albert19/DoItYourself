@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="styles/menu.css">
 	<link rel="stylesheet" href="styles/socials.css">
 	<link rel="stylesheet" href="styles/footer.css">
+	<link rel="stylesheet" href="styles/mobile_menu.css">
+	<link rel="stylesheet" href="styles/login_window.css">
+	<link rel="stylesheet" href="styles/client_zone.css">
 </head>
 <body>
 	<header class="header">
@@ -37,8 +40,26 @@
 					</ul>
 				</li>
 				<li class="outside"><a href="#/register">REGISTER</a></li>
-				<li class="outside"><a href="#/client_zone">CLIENT ZONE</a></li>
+				<li class="outside"><a href="#/client_zone" ng-click="open_login()">CLIENT ZONE</a></li>
+
 			</ul>
+		</nav>
+		<nav class="mobile_content">
+			<section class="menu_icon">
+				<img id="icon_menu" src="img/menu_icon.png" alt="menu_icon">
+			</section>
+			<section class="menu_applet">
+				<section class="zone_one">
+					<a href="#"><img src="img/home_icon.png" alt=""></a>
+					<a href="#"><img src="img/about_icon.png" alt=""></a>
+					<a href="#"><img src="img/designed_icon.png" alt=""></a>
+				</section>
+				<section class="zone_two">
+					<a href="#"><img src="img/customize_icon.png" alt=""></a>
+					<a href="#"><img src="img/register_icon.png" alt=""></a>
+					<a href="#"><img src="img/client_zone_icon.png" alt=""></a>
+				</section>
+			</section>
 		</nav>
 	</header>
 	<section class="body" ng-view>
@@ -72,17 +93,25 @@
 	</footer>
 	<script type="text/javascript" src="scripts/social.js"></script>
 	<script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/login.js"></script>
+	<script type="text/javascript" src="scripts/cookies.js"></script>
 	<script type="text/javascript" src="scripts/controllers/homeController.js"></script>
 	<script type="text/javascript" src="scripts/controllers/aboutController.js"></script>
 	<script type="text/javascript" src="scripts/controllers/basicsController.js"></script>
 	<script type="text/javascript" src="scripts/controllers/designsController.js"></script>
 	<script type="text/javascript" src="scripts/controllers/registerController.js"></script>
 	<script type="text/javascript" src="scripts/controllers/clientController.js"></script>
+	<script src="//code.jquery.com/jquery.min.js"></script>
 	<script src="scripts/angular.min.js"></script>
 	<script src="scripts/angular.route.min.js"></script>
 	<script>
 		angular.module("shop", ["ngRoute"])
-		//.controller("scripts/controllers/homeController", home)
+		.controller("scripts/controllers/homeController", homeController)
+		.controller("scripts/controllers/aboutController", aboutController)
+		.controller("scripts/controllers/basicsController", basicsController)
+		.controller("scripts/controllers/designsController", designsController)
+		.controller("scripts/controllers/registerController", registerController)
+		.controller("scripts/controllers/clientController", clientController)
 	    .config(function($routeProvider){
 	        $routeProvider
 	            .when("/", {
@@ -115,7 +144,7 @@
 	                controllerAs: "client",
 	                templateUrl: "views/client.php"
 	            })
-	    })  
+	    }) 
 	</script>
 </body>
 </html>

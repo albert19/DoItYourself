@@ -32,6 +32,7 @@ function designsController($http, $scope) {
 		var images=document.getElementById('image').files[0];
 		$scope.image_name=images.name;
 		$scope.image_data=images;
+		
 		var reader = new FileReader();
 		reader.onload = function() {
 			$scope.lletresB=true;
@@ -47,5 +48,6 @@ function designsController($http, $scope) {
 		document.getElementById('image').click();
 		$scope.pbuto='';
 	}
+
 
 }

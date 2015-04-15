@@ -12,7 +12,6 @@ $user_id=$dadesDesc->user_id;
 $file=$dadesDesc->image_name;
 $file_data=$dadesDesc->image_data;
 
-
 $nom='../../img/designs/proves.png';
 
 file_put_contents($nom, $file_data);
