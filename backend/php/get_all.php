@@ -12,7 +12,10 @@
 	    $outp .= '"clothe_id":"'.$rs["clothe_id"].'",';
 	    $outp .= '"total_price":"'.$rs["total_price"].'",';
 	    $outp .= '"user_id":"'.$rs["user_id"].'",';
-	    $outp .= '"img":"'.$rs["img"].'",';
+	    $outp .= '"img_front":"'.$rs["img_front"].'",';
+	    $outp .= '"img_back":"'.$rs["img_back"].'",';
+	    $outp .= '"img_left":"'.$rs["img_left"].'",';
+	    $outp .= '"img_right":"'.$rs["img_right"].'",';
 	    $outp .= '"likes":"'.$rs["likes"].'",';
 	    $outp .= '"boughts":"'. $rs["boughts"]. '"}';
 	}

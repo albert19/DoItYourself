@@ -11,8 +11,13 @@ $dadesDesc = json_decode($dadesPost);
 $type=$dadesDesc->type;
 $base_price=$dadesDesc->base_price;
 $color=$dadesDesc->color;
-$file='hey.png';
-$result = $connect->query("INSERT INTO diy_basics(type,base_price,color,img) VALUES ('".$type."','".$base_price."','".$color."','".$file."')");
+$img_front=$dadesDesc->img_front;
+$img_back=$dadesDesc->img_back;
+$img_right=$dadesDesc->img_right;
+$img_left=$dadesDesc->img_left;
+
+
+$result = $connect->query("INSERT INTO diy_basics(type,base_price,color,img_front,img_back,img_left,img_right) VALUES ('".$type."','".$base_price."','".$color."','".$img_front."','".$img_back."','".$img_left."','".$img_right."')");
 
 $conn->close();
 

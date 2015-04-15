@@ -30,7 +30,12 @@
 		<select ng-model="i_user_id">
 			<option ng-repeat="item in users  | orderBy:'user_id'" value="{{item.user_id}}"> {{item.name}} {{item.surnames}} </option>
 		</select>
-		<button id="load"> LOAD YOUR DESIGN (.PNG/.JPG) </button>
+
+		<input type="file" id="image" onChange="angular.element(this).scope().i_image()">
+		
+		<button id="load"> <h2 ng-hide=""> LOAD YOUR DESIGN (.PNG/.JPG) <h2>  
+			<img id="load_image">
+		</button>
 		<button id="cancel" ng-click="amaga_insertar=true"> Cancel </button>
 		<button id="envia" ng-click="send_all()"> Send </button>
 

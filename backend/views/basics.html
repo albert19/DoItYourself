@@ -1,12 +1,17 @@
 <h1> Aqui veurem totes les peces de roba </h1>
 
+<button ng-click="insert_basic()"> Insert a new Basic! </button>
+
 <table>
 	<tr>
 		<td> ID </td>
 		<td> TYPE </td>
 		<td> BASE PRICE </td>
 		<td> COLOR </td>
-		<td> IMAGE </td>
+		<td> FRONT IMAGE </td>
+		<td> BACK IMAGE </td>
+		<td> LEFT IMAGE </td>
+		<td> RIGHT IMAGE </td>		
 		<td></td>
 	</tr>
 	<tr ng-repeat="item in basics | orderBy:tal | filter:filtre">
@@ -14,10 +19,59 @@
 		<td> {{item.type}}</td>
 		<td> {{item.base_price}}</td>
 		<td> {{item.color}} </td>
-		<td> {{item.img}} </td>
+		<td> {{item.img_front}} </td>
+		<td> {{item.img_back}} </td>
+		<td> {{item.img_left}} </td>
+		<td> {{item.img_right}} </td>
 		<td> 
 			<img src="../images/delete.png" alt="delete" ng-click="delete(item.clothe_id)"> 
 			<img src="../images/update.png" alt="update" ng-click="update(item.clothe_id)">
 		</td>
 	</tr>
 </table>
+
+<div id="back_insertar" ng-hide="amaga_insertar" ng-click="amaga_insertar=true">
+
+	<div id="insertar" ng-click="$event.stopPropagation();">
+
+
+	<table>
+		
+		<tr>
+			<td> Cloth type: </td>
+			<td> 		
+				<select ng-model="i_type">
+					<option ng-repeat="item in types | orderBy:'type_id'" value="{{item.type_id}}"> {{item.name}} </option>
+				</select> 
+			</td>
+		</tr>
+		<tr>
+			<td> Base price: </td>
+			<td> <input type="number" min="0"  ng-model="i_base_price"> </td>
+		</tr>
+		<tr>
+			<td> Color: </td>
+			<td>
+				<select ng-model="i_color">
+					<option> HEY </option>
+				</select>	
+			</td>
+
+		</tr>
+
+	</table>
+					
+
+		<div id="img_basics">
+			<button ng-model='front_img_name'> {{front_img_name }} </button> 
+			<button ng-model='back_img_name'> {{ back_img_name }}</button> 	
+			<button ng-model='left_img_name'> {{left_img_name }} </button> 
+			<button ng-model='right_img_name'> {{ right_img_name }}</button> 		
+		</div>
+
+		<button id="cancel" ng-click="amaga_insertar=true"> Cancel </button>
+		<button id="envia" ng-click="send_all()"> Send </button>
+
+	</div>
+
+</div>

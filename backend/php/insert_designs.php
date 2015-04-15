@@ -9,7 +9,14 @@ $dadesPost =file_get_contents("php://input");
 $dadesDesc = json_decode($dadesPost);
 
 $user_id=$dadesDesc->user_id;
-$file='hey.png';
+$file=$dadesDesc->image_name;
+$file_data=$dadesDesc->image_data;
+
+
+$nom='../../img/designs/'.$file;
+
+file_put_contents($nom, $file_data);
+
 $result = $connect->query("INSERT INTO diy_designs(user_id,img) VALUES ('".$user_id."','".$file."')");
 
 $conn->close();

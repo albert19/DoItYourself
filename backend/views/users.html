@@ -1,5 +1,8 @@
 <h1> USERS </h1>
 
+<button ng-click="insert_user()"> Insert a new user </button>
+
+
 <table>
 	<tr>
 		<td> ID </td>
@@ -21,3 +24,35 @@
 		</td>
 	</tr>
 </table>
+
+<div id="back_insertar" ng-hide="amaga_insertar" ng-click="amaga_insertar=true">
+
+	<div id="insertar" ng-click="$event.stopPropagation();">
+
+	<table>
+		
+		<tr>
+			<td> Name: </td>
+			<td> <input type="text" ng-model="i_name"> </td>
+		</tr>
+		<tr>
+			<td> Surnames: </td>
+			<td> <input type="text" ng-model="i_surnames"> </td>
+		</tr>
+		<tr>
+			<td> Email: </td>
+			<td> <input type="text" ng-model="i_email"  ng-change="evalua_mail()" ng-style="evalua"> </td>
+		</tr>
+		<tr>
+			<td> Password: </td>
+			<td> <input type="password" ng-model="i_pass"></td>
+		</tr>
+
+	</table>
+					
+		<button id="cancel" ng-click="amaga_insertar=true"> Cancel </button>
+		<button id="envia" ng-click="send_all()"> Send </button>
+
+	</div>
+
+</div>

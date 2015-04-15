@@ -11,6 +11,7 @@ td {
 }
 
 table {
+	margin: 0 auto;
 	border-collapse: collapse;
 }
 
@@ -18,10 +19,15 @@ table tr td:last-child {
 	border:none;
 }
 
+
+table tr td:last-child img {
+	cursor: pointer;
+}
+
 #insertar {
 	width: 50%;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 50px;
 	background-color: white;
 	border-radius: 20px;
 }
@@ -54,6 +60,27 @@ table tr td:last-child {
 	color:blue;
 }
 
+
+#insertar table td {
+	border: none;
+	color:blue;
+	font-size: 20px;
+	font-style: italic; 
+}
+
+#insertar table select{
+	width: 100%;
+	padding: 5%;
+	border-radius: 10px;
+}
+
+ #insertar table input {
+ 	width: 90%;
+ 	padding: 5%;
+ 	border-radius: 10px;
+ }
+
+
 #load {
 	background-color: rgba(0,0,120,0.9);
 	color: white;
@@ -62,10 +89,10 @@ table tr td:last-child {
 }
 
 #cancel,#envia {
-	width: 40%;
+	width: 25%;
 	background-color: none;
 	color: white;
-	font-size: 40px;
+	font-size: 30px;
 	cursor: pointer;
 }
 
@@ -77,4 +104,26 @@ table tr td:last-child {
 #envia {
 	float: right;
 	background-color: rgba(0,135,0,0.8);
+}
+
+#img_basics {
+	width: 95%;
+	margin: 0 auto;
+	padding: 8px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;  
+	justify-content: space-around;
+	align-content:space-around;
+}
+
+#img_basics > * {
+	width: 20%;
+	border-radius: 10px;
+	font-size: 20px;
+	background-color: rgba(0,0,50,0.8);
+	color:white;
+	padding: 10px;
 }

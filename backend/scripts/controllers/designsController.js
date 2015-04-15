@@ -18,8 +18,32 @@ function designsController($http, $scope) {
 	}
 
 	$scope.send_all=function() {
-		$http.post('../php/insert_designs.php', { user_id: $scope.i_user_id });
+		$http.post('../php/insert_designs.php', { 
+			user_id: $scope.i_user_id, 
+			image_name:$scope.image_name, 
+			image_data:$scope.dataURL 
+		});
 		$http.get("../php/get_designs.php").success(function(response) {$scope.designs = response;});
 		$scope.amaga_insertar=true;
 	}
+
+	$scope.i_image=function() {
+		var images=document.getElementById('image').files[0];
+		$scope.image_name=images.name;
+		$scope.image_data=images;
+
+		var reader = new FileReader();
+		reader.onload = function() {
+			var $scope.dataURL=reader.result;
+			var output=document.getElementById('load_image');
+			output.src=$scope.dataURL;
+		};
+		reader.readAsDataURL(images);
+
+
+	}
+
+
+
+
 }
