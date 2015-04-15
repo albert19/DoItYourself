@@ -10,9 +10,9 @@
 		if ($outp != "[") {$outp .= ",";}
 	    $outp .= '{"user_id":"'.$rs["user_id"].'",';
 	    $outp .= '"name":"'.$rs["name"].'",';
-	    $outp .= '"surnames":"'.$rs["surnames"].'",';
+	    $outp .= '"surname":"'.$rs["surname"].'",';
 	    $outp .= '"email":"'.$rs["email"].'",';
-	    $outp .= '"hash_pass":"'. $rs["hash_pass"]. '"}';
+	    $outp .= '"password":"'. $rs["password"]. '"}';
 	}
 	$outp .="]";
 	$connection->disconnect($connect);
