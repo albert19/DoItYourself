@@ -1,3 +1,0 @@
-function MainController($scope,$http) {
-	
-}
