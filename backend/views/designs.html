@@ -1,21 +1,25 @@
-<script type="text/javascript" src="../scripts/jquery.min.js"></script>
+
+<button  class="nou" ng-click="insert_design()"> Insert a new Design ! </button>
 
 
 <h1> DESIGNS </h1>
 
-<button ng-click="insert_design()"> Insert a new Design ! </button>
 
 <table>
 	<tr>
 		<td> ID </td>
 		<td> IMG </td>
 		<td> USER_ID </td>
+		<td> LIKES </td>
+		<td> USED </td>
 		<td></td>
 	</tr>
 	<tr ng-repeat="item in designs | orderBy:tal | filter:filtre">
 		<td> {{item.design_id}} </td>
-		<td> {{item.img}}</td>
+		<td> <img ng-src="../../img/designs/{{item.img}}" alt="{{item.img}}"></td>
 		<td> {{item.user_id}}</td>
+		<td> {{item.used}}</td>
+		<td> {{item.likes}}</td>
 		<td> 
 			<img src="../images/delete.png" alt="delete" ng-click="delete(item.design_id)"> 
 			<img src="../images/update.png" alt="update" ng-click="update(item.design_id)">
@@ -31,14 +35,16 @@
 			<option ng-repeat="item in users  | orderBy:'user_id'" value="{{item.user_id}}"> {{item.name}} {{item.surnames}} </option>
 		</select>
 
-		<input type="file" id="image" onChange="angular.element(this).scope().i_image()">
-		
-		<button id="load"> <h2 ng-hide=""> LOAD YOUR DESIGN (.PNG/.JPG) <h2>  
-			<img id="load_image">
-		</button>
+		<input type="file" class="image" id="image" onChange="angular.element(this).scope().i_image()" ng-click="$event.stopPropagation();">
+
+		<button id="load" ng-click="puja()"> <img id="load_image"> {{ pbuto }}  </button>
+
+
+	</div>
+
+	<div id="cebuttons_div">
 		<button id="cancel" ng-click="amaga_insertar=true"> Cancel </button>
 		<button id="envia" ng-click="send_all()"> Send </button>
-
 	</div>
 
 </div>

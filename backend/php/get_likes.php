@@ -4,16 +4,14 @@
 	include_once('connection.php');
 	$connection = new Connection();
 	$connect = $connection->connect();
-	$result = $connect->query("SELECT * FROM diy_designs");
+	$result = $connect->query("SELECT * FROM diy_likes");
 	$outp = "[";
 	while($rs = $result->fetch_array(MYSQLI_ASSOC)){
 		if ($outp != "[") {$outp .= ",";}
-	    $outp .= '{"design_id":"'.$rs["design_id"].'",';
-	    $outp .= '"img":"'.$rs["img"].'",';
-	    $outp .= '"likes":"'.$rs["likes"].'",';
-	    $outp .= '"used":"'.$rs["used"].'",';
-	    $outp .= '"status":"'.$rs["status"].'",';
-	    $outp .= '"user_id":"'.$rs["user_id"].'"}';
+	    $outp .= '{"pred_id":"'.$rs["pred_id"].'",';
+	    $outp .= '"user_id":"'.$rs["user_id"].'",';
+	    $outp .= '"design_id":"'.$rs["design_id"].'",';
+	    $outp .= '"like_id":"'. $rs["like_id"]. '"}';
 	}
 	$outp .="]";
 	$connection->disconnect($connect);

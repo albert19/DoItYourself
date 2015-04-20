@@ -16,9 +16,7 @@ $img_back=$dadesDesc->img_back;
 $img_right=$dadesDesc->img_right;
 $img_left=$dadesDesc->img_left;
 
-
 $result = $connect->query("INSERT INTO diy_basics(type,base_price,color,img_front,img_back,img_left,img_right) VALUES ('".$type."','".$base_price."','".$color."','".$img_front."','".$img_back."','".$img_left."','".$img_right."')");
-
-$conn->close();
+$connection->disconnect($connect);
 
 ?>

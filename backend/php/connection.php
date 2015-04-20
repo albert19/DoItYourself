@@ -15,6 +15,7 @@
 			} else {
 				echo $this->error_connection_exist;
 			}
+			}
 		}
-	}
+	
 ?>
