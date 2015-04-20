@@ -1,0 +1,115 @@
+@font-face {
+  font-family: “Rival”;
+  src: url(../fonts/Rival.ttf); 
+}
+
+@font-face {
+  font-family: “Courier_new_bold”;
+  src: url(../fonts/Courier_new_Bold.TTF); 
+}
+
+.welcome_message {
+	text-align: center;
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+	font-size: 150%;
+	color: black;
+	background-color: orange;
+	padding: 1em;
+	width: 40%;
+	border-radius: 10px;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+.introduction {
+	background-color: #302E2E;
+	padding: 1em;
+	color: white;
+	font-weight: bold;
+	font-family: “Rival”;
+	text-align: justify;
+}
+
+.introduction a {
+	text-decoration: none;
+	color: white;
+}
+
+.introduction a:hover {
+	color: orange;
+}
+
+.link_buttons {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	width: 90%;
+	align-self: center;
+	-webkit-align-self: center;
+	-moz-align-self: center;
+	-ms-align-self: center;
+	background-color: #302E2E;
+	padding: 0.5em;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+
+.link_buttons a.pred_but  {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	background: url("../img/bg_pred_button.png") no-repeat fixed center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.link_buttons a.cust_but  {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	background: url("../img/bg_cust_button.png") no-repeat fixed center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
+	width: 90%;
+}
+
+.link_buttons a {
+	text-decoration: none;
+	color: orange;
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+	font-size: 130%;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-radius: 10px;
+	height: 200px;
+	justify-content: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+}
+
+.link_buttons a:hover {
+	background: orange;
+	color: white;
+}
+
+.link_buttons a p {
+	text-align: center;
+}
