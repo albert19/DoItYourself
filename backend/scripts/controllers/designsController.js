@@ -11,7 +11,7 @@ function designsController($http, $scope) {
 
 	$scope.delete=function(v) {
 		$http.post('../php/delete_designs.php', { id: v });
-		$http.get("../php/get_desigsns.php").success(function(response) {$scope.designs = response;});
+		$http.get("../php/get_designs.php").success(function(response) {$scope.designs = response;});
 	}
 
 	$scope.update=function(v) {
@@ -19,11 +19,12 @@ function designsController($http, $scope) {
 	}
 
 	$scope.send_all=function() {
-		$http.post('../php/insert_designs.php', { 
-			user_id: $scope.i_user_id, 
-			image_name:$scope.image_name, 
-			image_data:$scope.image_data 
-		});
+		$http.post('../php/insert_designs.php', { user_id: $scope.i_user_id, image_name:$scope.image_name});
+
+		var xml= new XMLHttpRequest();
+		xml.open('POST','../php/upload_image_design.php',true);
+		xml.send($scope.image_data);
+
 		$http.get("../php/get_designs.php").success(function(response) {$scope.designs = response;});
 		$scope.amaga_insertar=true;
 	}
@@ -31,8 +32,9 @@ function designsController($http, $scope) {
 	$scope.i_image=function() {
 		var images=document.getElementById('image').files[0];
 		$scope.image_name=images.name;
-		$scope.image_data=images;
-		
+		$scope.image_data= new FormData();
+		$scope.image_data.append('file',images);
+
 		var reader = new FileReader();
 		reader.onload = function() {
 			$scope.lletresB=true;

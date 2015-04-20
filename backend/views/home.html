@@ -4,17 +4,19 @@
 	<title>Do It Yourself</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../styles/basic.css">
+	<link rel="stylesheet" href="../styles/menu.css">
+
 </head>
-<body>
+<body ng-controller="homeController">
 
 <nav>
 
 			<ul>
-				<li ><a href="#/"> Home</a></li>
-				<li ><a href="#/basics"> Basic Clothes </a></li>
-				<li> <a href="#/users"> Clients </a> </li>
-				<li><a href="#/designs"> Designs </a></li>
-				<li><a href="#/all"> All clothes? </a></li>
+				<li ng-click="home()" ><a href="#/" id="home"> Home</a></li>
+				<li ng-click="basics()"><a href="#/basics" id="basics"> Basic Clothes </a></li>
+				<li ng-click="users()"> <a href="#/users" id="users"> Users </a> </li>
+				<li ng-click="designs()"><a href="#/designs" id="designs"> Designs </a></li>
+				<li ng-click="predesigns()"><a href="#/all" id="predesigns"> Predesigned </a></li>
 			</ul>
 </nav>
 
@@ -30,7 +32,7 @@
 	<script src="../scripts/angular.route.min.js"></script>
 	<script>
 		angular.module("shop", ["ngRoute"])
-		.controller("../scripts/controllers/homeController", homeController)
+		.controller("homeController", homeController)
 		.controller("../scripts/controllers/usersController", usersController)
 		.controller("../scripts/controllers/basicsController", basicsController)
 		.controller("../scripts/controllers/designsController", designsController)
@@ -38,7 +40,6 @@
 	    .config(function($routeProvider){
 	        $routeProvider
 	            .when("/", {
-	                controller: "../scripts/controllers/homeController",
 	                templateUrl: "../views/inici.html"
 	            })
 	            .when("/basics", {

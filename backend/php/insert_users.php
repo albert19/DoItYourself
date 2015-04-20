@@ -17,6 +17,6 @@ $hash_pass=md5($pass);
 
 $result = $connect->query("INSERT INTO diy_users(name,surnames,email,hash_pass) VALUES ('".$name."','".$surnames."','".$email."','".$hash_pass."')");
 
-$conn->close();
+$connection->disconnect($connect);
 
 ?>

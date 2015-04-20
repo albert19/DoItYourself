@@ -11,6 +11,7 @@ $dadesDesc = json_decode($dadesPost);
 $id=$dadesDesc->id;
 $result = $connect->query("DELETE FROM diy_predesigns WHERE pred_id='".$id."'");
 
-$conn->close();
+$connection->disconnect($connect);
+
 
 ?>

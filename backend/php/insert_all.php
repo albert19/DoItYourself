@@ -11,12 +11,15 @@ $dadesDesc = json_decode($dadesPost);
 $clothe_id=$dadesDesc->clothe_id;
 $total_price=$dadesDesc->$total_price;
 $user_id=$dadesDesc->user_id;
-$img='hola';
+$img_front=$dadesDesc->img_front;
+$img_back=$dadesDesc->img_back;
+$img_left=$dadesDesc->img_left;
+$img_right=$dadesDesc->img_right;
 $likes=$dadesDesc->likes;
 $boughts=$dadesDesc->boughts;
 
-$result = $connect->query("INSERT INTO diy_predesigns(clothe_id,total_price,user_id,img,likes,boughts) VALUES ('".$clothe_id."','".$total_price."','".$user_id."','".$img."','".$likes."','".$boughts."')");
+$result = $connect->query("INSERT INTO diy_predesigns(clothe_id,total_price,user_id,img_front,img_back,img_left,img_right,likes,boughts) VALUES ('".$clothe_id."','".$total_price."','".$user_id."','".$img_front."','".$img_back."','".$img_left."','".$img_right."','".$likes."','".$boughts."')");
 
-$conn->close();
+$connection->disconnect($connect);
 
 ?>

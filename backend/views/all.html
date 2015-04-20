@@ -1,10 +1,11 @@
+<button  class="nou" ng-click="insert_all()"> Insert a new Basic! </button>
+
+
 <h1> TOT </h1>
 
-<button ng-click="insert_all()"> Insert a new Basic! </button>
 
 <table>
 	<tr>
-		<td> ID </td>
 		<td> CLOTH ID </td>
 		<td> USER ID </td>
 		<td> TOTAL  </td>
@@ -17,7 +18,6 @@
 		<td></td>
 	</tr>
 	<tr ng-repeat="item in all | orderBy:tal | filter:filtre">
-		<td> {{item.pred_id}} </td>
 		<td> {{item.clothe_id}}</td>
 		<td> {{item.user_id}} </td>
 		<td> {{item.total_price}}</td>
@@ -67,23 +67,29 @@
 		</tr>
 		<tr>
 			<td> Boughts: </td>
-			<td> <input type="file" accept="image/*" id="image" onChange="angular.element(this).scope().i_image()"></td>
+			<td> <input type="number" ng-model="i_boughts"></td>
 		</tr>
 	</table>
 
+
+
+		<input type="file" class="image" id="image_front" onChange="angular.element(this).scope().i_image_front()" ng-click="$event.stopPropagation();">
+		<input type="file" class="image" id="image_back" onChange="angular.element(this).scope().i_image_back()" ng-click="$event.stopPropagation();">
+		<input type="file" class="image" id="image_left" onChange="angular.element(this).scope().i_image_left()" ng-click="$event.stopPropagation();">
+		<input type="file" class="image" id="image_right" onChange="angular.element(this).scope().i_image_right()" ng-click="$event.stopPropagation();">
+
+
 		<div id="img_basics">
-			<button ng-model='front_img_name'> {{front_img_name }} </button> 
-			<button ng-model='back_img_name'> {{ back_img_name }}</button> 	
-			<button ng-model='left_img_name'> {{left_img_name }} </button> 
-			<button ng-model='right_img_name'> {{ right_img_name }}</button> 		
+			<button ng-model='front_img_name' ng-click="puja_front()"> <img id="load_image_front"> {{f_img_name }} </button> 
+			<button ng-model='back_img_name' ng-click="puja_back()"> <img id="load_image_back"> {{ b_img_name }}</button> 	
+			<button ng-model='left_img_name' ng-click="puja_left()">  <img id="load_image_left"> {{l_img_name }} </button> 
+			<button ng-model='right_img_name' ng-click="puja_right()">  <img id="load_image_right">  {{ r_img_name }}</button> 		
 		</div>
+	</div>
 
-		<div id="previsualitza"> </div>
-
-					
+	<div id="cebuttons_div">
 		<button id="cancel" ng-click="amaga_insertar=true"> Cancel </button>
 		<button id="envia" ng-click="send_all()"> Send </button>
-
 	</div>
 
 </div>
