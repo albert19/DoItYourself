@@ -1,23 +1,25 @@
 <?php
+	session_start();
 	include_once('../connections/connection.php');
 	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: application/json; charset=UTF-8");
-	$connection2 = new Connection();
-	$conn2 = $connection2->connect();
+	$connection = new Connection();
+	$conn = $connection->connect();
 
-	$postData =file_get_contents("php://input");
+	$result = $conn->query("SELECT * FROM diy_users");
 
-	$postData2 = json_decode($postData);
+	$outp = "[";
 
-	$email2 = $postData2->email2;
-
-	$result2 = $conn2->query("SELECT * FROM diy_users WHERE email = 'lopez.albert81@gmail.com'");
-	$row = mysql_fetch_array($result2);
-	if ($row['email'] == "lopez.albert81@gmail.com") {
-		$outp2 = 1;
-	} else {
-		$outp2 = 0;
+	while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+	    if ($outp != "[") {$outp .= ",";}
+	    $outp .= '{"user_id":'  . $rs["user_id"] . ',';
+	    $outp .= '"name":"'   . $rs["name"]        . '",';
+	    $outp .= '"surnames":"'. $rs["surnames"]     . '",';
+	    $outp .= '"email":"'. $rs["email"]     . '"}';
 	}
-  	$conn2->close();
-  	echo($outp2);
+
+	$outp .="]";
+
+  	$conn->close();
+  	echo($outp);
 ?>

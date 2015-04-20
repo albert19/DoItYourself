@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="styles/mobile_menu.css">
 	<link rel="stylesheet" href="styles/login_window.css">
 	<link rel="stylesheet" href="styles/client_zone.css">
+	<link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
 	<header class="header">
@@ -28,15 +29,15 @@
 			</section>
 		</nav>
 		<nav class="down_content">
-			<img src="img/logo_negre.png" alt="">
+			<img src="img/logos/logo_negre.png" alt="">
 			<ul class="menu">
 				<li class="outside"><a href="#/">HOME</a></li>
 				<li class="outside"><a href="#/about">ABOUT US</a></li>
 				<li class="outside" id="dropdown">
 					<a class="inner_link" href="#">PRODUCTS</a>
 					<ul class="sub_menu">
-						<li><a href="#/products/basics">PREDESIGNS</a></li>
-						<li><a href="#/products/designs">CUSTOMIZE</a></li>
+						<li><a href="#/products/predesigns">PREDESIGNS</a></li>
+						<li><a href="#/products/customize">CUSTOMIZE</a></li>
 					</ul>
 				</li>
 				<li class="outside"><a href="#/register">REGISTER</a></li>
@@ -46,7 +47,7 @@
 		</nav>
 		<nav class="mobile_content">
 			<section class="menu_icon">
-				<img id="icon_menu" src="img/menu_icon.png" alt="menu_icon">
+				<img id="icon_menu" src="img/icons/menu_icon.png" alt="menu_icon">
 			</section>
 			<section class="menu_applet">
 				<section class="zone_one">
@@ -101,7 +102,7 @@
 	<script type="text/javascript" src="scripts/controllers/designsController.js"></script>
 	<script type="text/javascript" src="scripts/controllers/registerController.js"></script>
 	<script type="text/javascript" src="scripts/controllers/clientController.js"></script>
-	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="scripts/jquery.min.js"></script>
 	<script src="scripts/angular.min.js"></script>
 	<script src="scripts/angular.route.min.js"></script>
 	<script>
@@ -124,15 +125,15 @@
 	                controllerAs: "about",
 	                templateUrl: "views/about.php"
 	            })
-	            .when("/products/basics", {
+	            .when("/products/predesigns", {
 	                controller: "scripts/controllers/basicsController",
 	                controllerAs: "basics",
-	                templateUrl: "views/basics.php"
+	                templateUrl: "views/designs.php"
 	            })
-	            .when("/products/designs", {
+	            .when("/products/customize", {
 	                controller: "scripts/controllers/designsController",
 	                controllerAs: "designs",
-	                templateUrl: "views/designs.php"
+	                templateUrl: "views/basics.php"
 	            })
 	            .when("/register", {
 	                controller: "scripts/controllers/registerController",

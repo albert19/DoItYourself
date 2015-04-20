@@ -1,7 +1,18 @@
 Dilluns 13/04/15 :
 
-	Albert - Disseny de formulari login i les seves funcionalitats
+	Albert - Design of the login form and it features.
 
-	Lu - Getters & Deletes del backend
+	Lu - Getters & Deletes of the backend.
 
-	
+
+Dimarts 14/04/15 :
+
+	Albert - Session create and user data loading of the current user.
+
+	Lu - Backend getters and deletes application and initialization of server file upload.
+
+Dimecres 15/04/15 :
+
+	Albert - Definitive login creation and personal data management in the user view.
+
+	Lu - Server file upload.

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: “Rival”;
+  src: url(../fonts/Rival.ttf); 
+}
+
+@font-face {
+  font-family: “Courier_new_bold”;
+  src: url(../fonts/Courier_new_Bold.TTF); 
+}
+
 .not_user_zone {
 	display: flex;
 	display: -webkit-flex;
@@ -30,4 +40,707 @@
 .login_link:hover {
 	background-color: #302E2E;
 	color: white;
+}
+
+.user_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+}
+
+.page_title {
+	text-align: center;
+	font-weight: bold;
+	background-color: orange;
+	padding: 1em;
+	border-radius: 5px;
+	font-family: “Rival”;
+}
+
+.user_grids {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	width: 100%;
+}
+
+.info_grid {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	width: 60%;
+	align-self: center;
+	-webkit-align-self: center;
+	-moz-align-self: center;
+	-ms-align-self: center;
+}
+
+.info_title {
+	text-align: center;
+	font-weight: bold;
+	background-color: black;
+	color: orange;
+	padding: 0.5em;
+	font-family: “Rival”;
+	font-size: 120%;
+	border-radius: 5px;
+}
+
+.data_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	background-color: #302E2E;
+	border-radius: 10px;
+	padding: 0.5em;
+}
+
+.name_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.name_zone p,
+.surnames_zone p,
+.email_zone2 p {
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+.name_zone p[class~="title"], .name_title {
+	font-weight: bold;
+	color: white;
+	font-family: “Rival”;
+}
+.name_content,
+.surname_content,
+.email_content {
+	color: orange;
+}
+
+.surnames_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.surnames_title {
+	font-weight: bold;
+	color: white;
+	font-family: “Courier_new_bold”;
+}
+
+.email_zone2 {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.email_title {
+	font-weight: bold;
+	color: white;
+	font-family: “Courier_new_bold”;
+}
+
+.name_zone img,
+.surnames_zone img,
+.email_zone2 img {
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 10px;
+	padding: 0.1em;
+}
+
+.name_zone img:hover,
+.surnames_zone img:hover,
+.email_zone2 img:hover {
+	background-color: orange;
+}
+
+.middle_grids {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+}
+
+.predesigns_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	width: 40%;
+	margin-right: 5px;
+}
+
+.predesign_item {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	background-color: #302E2E;
+	padding: 1.5em;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.predesign_images {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+}
+
+.base_image {
+	border: 2px solid #302E2E;
+	align-self: center;
+	-webkit-align-self: center;
+	-moz-align-self: center;
+	-ms-align-self: center;
+}
+
+.change_images {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	margin-top: 10px;
+}
+
+.change_images img {
+	height: 70px;
+	margin-right: 6px;
+}
+
+.predesigns_title {
+	text-align: center;
+	font-weight: bold;
+	background-color: black;
+	color: orange;
+	padding: 0.5em;
+	font-family: “Rival”;
+	font-size: 120%;
+	border-radius: 5px;
+}
+
+.predesign_info {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	margin-left: 50px;
+}
+
+.solds_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.solds_title,
+.votes_title {
+	font-weight: bold;
+	color: white;
+	font-family: “Rival”;
+}
+
+.solds_content,
+.votes_content {
+	font-weight: bold;
+	color: orange;
+	font-family: “Courier_new_bold”;
+	margin-left: 0.5em;
+}
+
+.votes_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.predesigns_buttons_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.predesigns_buttons_zone .pred_private_button {
+	padding: 0.5em;
+	color: white;
+	background-color: black;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+}
+
+.predesigns_buttons_zone .pred_public_button {
+	padding: 0.5em;
+	color: white;
+	background-color: black;
+	border: none;
+	margin-left: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+}
+
+
+
+.designs_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	width: 40%;
+	margin-left: 5px;
+}
+
+.design_item {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	background-color: #302E2E;
+	border-radius: 10px;
+	padding: 1.5em;
+	margin-bottom: 10px;
+}
+
+.design_item .image_content {
+	background-color: white;
+	padding: 0.5em;
+	border-radius: 5px;
+}
+
+.designs_title {
+	text-align: center;
+	font-weight: bold;
+	background-color: black;
+	color: orange;
+	padding: 0.5em;
+	font-family: “Rival”;
+	font-size: 120%;
+	border-radius: 5px;
+}
+
+.design_info {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	margin-left: 50px;
+}
+
+.likes_title,
+.used_title {
+	font-weight: bold;
+	color: white;
+	font-family: “Rival”;
+}
+
+.likes_content,
+.used_content {
+	font-weight: bold;
+	color: orange;
+	font-family: “Courier_new_bold”;
+	margin-left: 0.5em;
+}
+
+.likes_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.used_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.designs_buttons_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.design_private_button {
+	padding: 0.5em;
+	color: white;
+	background-color: black;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+}
+
+.design_public_button {
+	padding: 0.5em;
+	color: white;
+	background-color: black;
+	border: none;
+	margin-left: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+}
+
+.puchases_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	width: 60%;
+	align-self: center;
+	-webkit-align-self: center;
+	-moz-align-self: center;
+	-ms-align-self: center;
+	margin-bottom: 10px;
+}
+
+.purchases_title {
+	text-align: center;
+	font-weight: bold;
+	background-color: black;
+	color: orange;
+	padding: 0.5em;
+	font-family: “Rival”;
+	font-size: 120%;
+	border-radius: 5px;
+}
+
+.purchase_item {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	background-color: #302E2E;
+	border-radius: 10px;
+	padding: 1em;
+	margin-bottom: 10px;
+}
+
+.date_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.description_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.total_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+}
+
+.date_title,
+.description_title,
+.total_title {
+	font-weight: bold;
+	color: white;
+	font-family: “Rival”;
+	margin-right: 10px;
+}
+
+.date_content,
+.description_content,
+.total_content {
+	font-weight: bold;
+	color: orange;
+	font-family: “Courier_new_bold”;
+	margin-left: 0.5em;
+	margin-right: 10px;
+}
+
+.password_button {
+	padding: 0.5em;
+	color: white;
+	background-color: black;
+	border: none;
+	font-weight: bold;
+	font-family: “Courier_new_bold”;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.password_button:hover {
+	background-color: orange;
+	color: black;
+}
+
+.new_password {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+}
+
+.old_pass_input,
+.new_pass_input {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	height: 50px;
+	width: 50%;
+	background-color: rgba(255,172,0,0.2);
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+	border: none;
+	margin-top: 10px;
+	color: black;
+}
+
+.pass_check_button {
+	width: 50px;
+	height: 46px;
+	background-color: black;
+	border-radius: 10px;
+	padding: 0.5em;
+	margin-top: 10px;
+}
+
+.pass_check_button:hover {
+	background-color: orange;
+}
+
+.error_pass_change {
+	align-self: center;
+	color: red;
+	font-weight: bold;
+}
+
+.ok_pass_change {
+	align-self: center;
+	color: green;
+	font-weight: bold;
+}
+
+.update_name_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.update_surnames_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.update_email_zone {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	margin-top: 10px;
+	margin-bottom: 10px;	
+}
+
+.update_name_zone img,
+.update_surnames_zone img,
+.update_email_zone img {
+	width: 50px;
+	height: 46px;
+	background-color: black;
+	border-radius: 10px;
+	padding: 0.5em;
+	margin-left: 10px;
+}
+
+.update_name_zone img:hover,
+.update_surnames_zone img:hover,
+.update_email_zone img:hover {
+	background-color: orange;
+}
+
+.update_name_input,
+.update_surnames_input,
+.update_email_input {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	background-color: rgba(255,172,0,0.2);
+	border-radius: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+	border: none;
+	margin-top: 10px;
+	color: black;
 }

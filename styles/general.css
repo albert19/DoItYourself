@@ -13,6 +13,11 @@ body, html {
 	-moz-flex-direction: column;
 	-ms-flex-direction: column;
 	margin: 0px 0px 0px 0px;
+	background: url("../img/bg.png") no-repeat fixed center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	background-size: cover;
 }
 
 .header {

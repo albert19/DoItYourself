@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include_once('../connections/connection.php');
 	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: application/json; charset=UTF-8");
@@ -18,15 +19,25 @@
 	while($rs = $result->fetch_array(MYSQLI_ASSOC)){
 		if ($rs['email'] == $email) {
 			if ($rs['hash_pass'] == $hash_input_pass) {
-				$_COOKIE['user'] = $rs['email'];
-				if (isset($_COOKIE['user'])) {
-					$check = 1;
-				}
+				$_SESSION['email'] = $rs['email'];
+				$_SESSION['user_id'] = $rs['user_id'];
+				$_SESSION['name'] = $rs['name'];
+				$_SESSION['surnames'] = $rs['surnames'];
+				$status = "ok";
+				$id = $_SESSION['user_id'];
+				$name = $_SESSION['name'];
+				$surnames = $_SESSION['surnames'];
+				$email = $_SESSION['email'];
 			} else {
-				$check = 0;
+				$status = "error";
+				$id = null;
+				$name = null;
+				$surnames = null;
+				$email = null;
 			}
 		}
 	}
   	$conn->close();
-  	echo($check);
+  	$result = '[{"status":"'.$status.'","id":"'.$id.'","name":"'.$name.'","surnames":"'.$surnames.'","email":"'.$email.'"}]';
+  	echo($result);
 ?>
